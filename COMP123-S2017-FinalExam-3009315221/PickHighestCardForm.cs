@@ -257,6 +257,8 @@ namespace COMP123_S2017_FinalExam_3009315221
         private void PickHighestCardForm_Load(object sender, EventArgs e)
         {
             // Initialize ScoreBoard HERE
+            ScoreBoard scoreboard = new ScoreBoard(ScoreTextBox, TimeTextBox, FinalScoreTextBox);
+
 
             // Initialize the App Sounds
             this._buildDealtCardPictureBoxList();
@@ -307,7 +309,8 @@ namespace COMP123_S2017_FinalExam_3009315221
                 this.CurrentClickedCard.BackColor = Color.Green;
                 UserMessageTextBox.Text = "You Got It!";
 
-                //Uncomment this --> ScoreBoard.Score += this.MaximumPoints;
+                //Uncomment this --> 
+                ScoreBoard.Score += this.MaximumPoints;
 
                 DealButton.Enabled = true;
             }
