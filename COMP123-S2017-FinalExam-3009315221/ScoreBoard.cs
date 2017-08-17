@@ -10,7 +10,7 @@ using System.Windows.Forms;
  * Date: Aug 17th, 2017
  * StudentID: 300931522 
  * Description: This is the ScoreBoard class
- * Version: 1.1 - Added private instance variables and public properties to scoreboard class
+ * Version: 1.2 - Added updatetime and constructor methods
  */
 
 namespace COMP123_S2017_FinalExam_3009315221
@@ -45,7 +45,9 @@ namespace COMP123_S2017_FinalExam_3009315221
             }
             set
             {
-                this._score = value;
+                this.Score = value;
+                ScoreTextBox.Text = Convert.ToString(_score);
+                FinalScoreTextBox.Text = Convert.ToString(_score);
             }
         }
 
@@ -70,6 +72,7 @@ namespace COMP123_S2017_FinalExam_3009315221
             set
             {
                 this._time = value;
+                TimeTextBox.Text = Convert.ToString(_time);
             }
         }
 
@@ -86,10 +89,29 @@ namespace COMP123_S2017_FinalExam_3009315221
         }
 
 
-
+        /// <summary>
+        /// This is the main constructor
+        /// </summary>
+        /// <param name="scoreTextBox"></param>
+        /// <param name="timeTextBox"></param>
+        /// <param name="finalScoreTextBox"></param>
         // CONSTRUCTORS
+        public ScoreBoard(TextBox scoreTextBox, TextBox timeTextBox, TextBox finalScoreTextBox)
+        {
+            this.ScoreTextBox = scoreTextBox;
+            this.TimeTextBox = timeTextBox;
+            this.FinalScoreTextBox = finalScoreTextBox;
+        }
 
 
+        /// <summary>
+        /// This is the updatetime Method that
+        /// </summary>
+        // PUBLIC METHODS
+        public void UpdateTime()
+        {
+            Time = Convert.ToInt32(TimeTextBox.Text) - 1;
+        }
 
 
     }
