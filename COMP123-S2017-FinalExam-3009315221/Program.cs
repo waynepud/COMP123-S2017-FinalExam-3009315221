@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 /*
  * Name: Wayne Pud
- * Date: Aug 8th, 2017
+ * Date: Aug 17th, 2017
  * StudentID: 300931522 
  * Description: This is the program driver class
  * Version: 1.0 - Created template and project with student ID renamed
