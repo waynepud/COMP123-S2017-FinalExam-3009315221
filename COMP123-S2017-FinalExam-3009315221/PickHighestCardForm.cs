@@ -15,7 +15,7 @@ using System.Windows.Forms;
  * Date: Aug 17th, 2017
  * StudentID: 300931522 
  * Description: This is the PickHighestCardForm (the main form)
- * Version: 1.1 - Defined scoreboard variable and property and edited reset method
+ * Version: 1.2 - Added a scoreboard object referencing the scoreboard class and uncommented scoreboard.score
  */
 
 namespace COMP123_S2017_FinalExam_3009315221
@@ -257,7 +257,7 @@ namespace COMP123_S2017_FinalExam_3009315221
         private void PickHighestCardForm_Load(object sender, EventArgs e)
         {
             // Initialize ScoreBoard HERE
-            ScoreBoard scoreboard = new ScoreBoard(ScoreTextBox, TimeTextBox, FinalScoreTextBox);
+            this.ScoreBoard = new ScoreBoard(ScoreTextBox, TimeTextBox, FinalScoreTextBox);
 
 
             // Initialize the App Sounds
@@ -396,7 +396,7 @@ namespace COMP123_S2017_FinalExam_3009315221
         /// <param name="e"></param>
         private void CountDownTimer_Tick(object sender, EventArgs e)
         {
-            /* Uncomment THIS
+            //Uncomment THIS
             ScoreBoard.UpdateTime();
             if (ScoreBoard.Time == 0)
             {
@@ -405,7 +405,7 @@ namespace COMP123_S2017_FinalExam_3009315221
                 this._disableDealtCards();
                 this._showFinalScore();
             }
-            */
+
         }
 
         /// <summary>

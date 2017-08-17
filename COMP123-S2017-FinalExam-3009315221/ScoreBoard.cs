@@ -45,7 +45,7 @@ namespace COMP123_S2017_FinalExam_3009315221
             }
             set
             {
-                this.Score = value;
+                this._score = value;
                 ScoreTextBox.Text = Convert.ToString(_score);
                 FinalScoreTextBox.Text = Convert.ToString(_score);
             }
