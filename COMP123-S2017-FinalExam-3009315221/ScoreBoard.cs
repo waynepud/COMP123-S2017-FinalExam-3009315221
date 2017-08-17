@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace COMP123_S2017_FinalExam_3009315221
 {
-    class ScoreBoard
+    public class ScoreBoard
     {
         // PRIVATE INSTANCE VARIABLES
         private TextBox _finalScoreTextBox;

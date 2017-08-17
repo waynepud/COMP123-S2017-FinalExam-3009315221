@@ -15,7 +15,7 @@ using System.Windows.Forms;
  * Date: Aug 17th, 2017
  * StudentID: 300931522 
  * Description: This is the PickHighestCardForm (the main form)
- * Version: 1.0 - 
+ * Version: 1.1 - Defined scoreboard variable and property and edited reset method
  */
 
 namespace COMP123_S2017_FinalExam_3009315221
@@ -30,7 +30,27 @@ namespace COMP123_S2017_FinalExam_3009315221
         Hand _hand;
         int _maximumPoints;
 
+        // Added this private variable
+        private ScoreBoard _scoreboard;
+
+
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        // Added this public property
+        public ScoreBoard ScoreBoard
+        {
+            get
+            {
+                return this._scoreboard;
+            }
+            set
+            {
+                this._scoreboard = value;
+            }
+        }
+
+
+
         public List<PictureBox> DealtCardPictureBoxList
         {
             get
@@ -112,6 +132,19 @@ namespace COMP123_S2017_FinalExam_3009315221
             }
         }
 
+        //public ScoreBoard Scoreboard
+        //{
+        //    get
+        //    {
+        //        return _scoreboard;
+        //    }
+
+        //    set
+        //    {
+        //        _scoreboard = value;
+        //    }
+        //}
+
         // CONSTRUCTORS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public PickHighestCardForm()
         {
@@ -191,6 +224,8 @@ namespace COMP123_S2017_FinalExam_3009315221
         /// </summary>
         private void _reset()
         {
+            ScoreBoard.Score = 0;
+            ScoreBoard.Time = 30;
             this._hideCards();
             this._resetDeck();
             CountDownTimer.Enabled = true;
