@@ -9,13 +9,16 @@ using System.Windows.Forms;
  * Date: Aug 17th, 2017
  * StudentID: 300931522 
  * Description: This is the program driver class
- * Version: 1.0 - Created template and project with student ID renamed
+ * Version: 1.1 - Changed application run to splashform and created reference pickHighestCardForm used in splashform
  */
 
 namespace COMP123_S2017_FinalExam_3009315221
 {
     public static class Program
     {
+        //This is a reference to the forms
+        public static PickHighestCardForm pickHighestCardForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -24,7 +27,9 @@ namespace COMP123_S2017_FinalExam_3009315221
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PickHighestCardForm());
+
+            pickHighestCardForm = new PickHighestCardForm();
+            Application.Run(new SplashForm());
         }
     }
 }

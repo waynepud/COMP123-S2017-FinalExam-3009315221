@@ -20,14 +20,31 @@ namespace COMP123_S2017_FinalExam_3009315221
 {
     public partial class SplashForm : Form
     {
+        //PUBLIC PROPERTIES
+        public PickHighestCardForm PickHighestCardForm
+        {
+            get
+            {
+                return Program.pickHighestCardForm;
+            }
+        }
+
+        //CONSTRUCTORS
         public SplashForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is the event handler for timer of the splashform
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            this.PickHighestCardForm.Show();
+            this.Hide();
+            timer1.Enabled = false;
         }
     }
 }
