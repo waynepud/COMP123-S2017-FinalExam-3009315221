@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
- * Description:
- * Version:
+ * Name: Wayne Pud
+ * Date: Aug 17th, 2017
+ * StudentID: 300931522 
+ * Description: This is the PickHighestCardForm (the main form)
+ * Version: 1.0 - 
  */
 
 namespace COMP123_S2017_FinalExam_3009315221
